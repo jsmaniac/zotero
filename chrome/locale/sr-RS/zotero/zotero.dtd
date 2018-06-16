@@ -114,6 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Уклони ставку…">
 <!ENTITY zotero.toolbar.newLibrary.label "Нова библиотека">
 <!ENTITY zotero.toolbar.newCollection.label "Нова збирка…">
+<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Означи довод прочитаним…">
 <!ENTITY zotero.toolbar.newGroup "Нова група…">
 <!ENTITY zotero.toolbar.newSubcollection.label "Нова подзбирка…">

@@ -114,6 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Xóa mục...">
 <!ENTITY zotero.toolbar.newLibrary.label "Thư viện mới">
 <!ENTITY zotero.toolbar.newCollection.label "Bộ sưu tập mới...">
+<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Đánh dấu là đã đọc">
 <!ENTITY zotero.toolbar.newGroup "Nhóm mới...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Bô sưu tập con mới...">

@@ -114,6 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Odstrani vnos ...">
 <!ENTITY zotero.toolbar.newLibrary.label "Nova knjižnica ">
 <!ENTITY zotero.toolbar.newCollection.label "Nova zbirka ...">
+<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Označi vir kot prebran">
 <!ENTITY zotero.toolbar.newGroup "Nova skupina ...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Nova podzbirka ...">

@@ -114,6 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "アイテムを削除...">
 <!ENTITY zotero.toolbar.newLibrary.label "新しいライブラリ">
 <!ENTITY zotero.toolbar.newCollection.label "新規コレクション...">
+<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "フィードを既読にする">
 <!ENTITY zotero.toolbar.newGroup "新規グループ...">
 <!ENTITY zotero.toolbar.newSubcollection.label "新規サブコレクション...">

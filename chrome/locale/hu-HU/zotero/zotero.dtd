@@ -114,6 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Elem törlése...">
 <!ENTITY zotero.toolbar.newLibrary.label "New Library">
 <!ENTITY zotero.toolbar.newCollection.label "Új gyűjtemény...">
+<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Mark Feed as Read">
 <!ENTITY zotero.toolbar.newGroup "Új csoport...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Új algyűjtemény...">

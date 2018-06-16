@@ -114,6 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "移除項目…">
 <!ENTITY zotero.toolbar.newLibrary.label "新的文獻庫">
 <!ENTITY zotero.toolbar.newCollection.label "新增文獻庫">
+<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "標示 Feed 為已讀">
 <!ENTITY zotero.toolbar.newGroup "新增群組…">
 <!ENTITY zotero.toolbar.newSubcollection.label "新增子文獻庫…">

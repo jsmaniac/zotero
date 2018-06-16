@@ -114,6 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Odstrániť záznam...">
 <!ENTITY zotero.toolbar.newLibrary.label "Nová knižnica">
 <!ENTITY zotero.toolbar.newCollection.label "Nová kolekcia...">
+<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Označiť RSS správy ako prečítané">
 <!ENTITY zotero.toolbar.newGroup "Nová skupina...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Nová sub-kolekcia...">

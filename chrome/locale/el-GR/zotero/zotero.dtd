@@ -114,6 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Απομάκρυνση στοιχείου...">
 <!ENTITY zotero.toolbar.newLibrary.label "New Library">
 <!ENTITY zotero.toolbar.newCollection.label "Νέα συλλογή...">
+<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Mark Feed as Read">
 <!ENTITY zotero.toolbar.newGroup "Νέα ομάδα...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Νέα δευτερεύουσα συλλογή...">

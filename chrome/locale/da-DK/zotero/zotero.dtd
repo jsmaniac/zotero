@@ -114,6 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Fjern ...">
 <!ENTITY zotero.toolbar.newLibrary.label "Nyt bibliotek">
 <!ENTITY zotero.toolbar.newCollection.label "Ny Samling...">
+<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Markér nyhedsstrøm som læst">
 <!ENTITY zotero.toolbar.newGroup "Ny Gruppe ...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Ny delsamling">

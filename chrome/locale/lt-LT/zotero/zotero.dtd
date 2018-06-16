@@ -114,6 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Pašalinti įrašą...">
 <!ENTITY zotero.toolbar.newLibrary.label "Nauja biblioteka">
 <!ENTITY zotero.toolbar.newCollection.label "Naujas rinkinys...">
+<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Žymėti naujienų kanalą skaitytu">
 <!ENTITY zotero.toolbar.newGroup "Nauja grupė...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Naujas poaplankis...">
