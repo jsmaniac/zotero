@@ -114,7 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Eseri Kaldır...">
 <!ENTITY zotero.toolbar.newLibrary.label "Yeni Kitaplık">
 <!ENTITY zotero.toolbar.newCollection.label "Yeni Derme...">
-<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
+<!ENTITY zotero.toolbar.showCollectionLookup.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Beslemeyi Okunmuş İşaretle">
 <!ENTITY zotero.toolbar.newGroup "Yeni Grup...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Yeni Alt Derme...">

@@ -114,7 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Șterge înregistrare...">
 <!ENTITY zotero.toolbar.newLibrary.label "Bibliotecă nouă">
 <!ENTITY zotero.toolbar.newCollection.label "Colecție nouă...">
-<!ENTITY zotero.toolbar.searchCollections.label "Filtrează lista de colecții...">
+<!ENTITY zotero.toolbar.showCollectionLookup.label "Filtrează lista de colecții...">
 <!ENTITY zotero.toolbar.markFeedRead.label "Marchează fluxul ca citit">
 <!ENTITY zotero.toolbar.newGroup "Grup nou...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Subcolecție nouă...">

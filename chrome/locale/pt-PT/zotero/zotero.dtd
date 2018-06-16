@@ -114,7 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Remover Item...">
 <!ENTITY zotero.toolbar.newLibrary.label "Nova Biblioteca">
 <!ENTITY zotero.toolbar.newCollection.label "Nova Colecção...">
-<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
+<!ENTITY zotero.toolbar.showCollectionLookup.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Marcar Feed como Lido">
 <!ENTITY zotero.toolbar.newGroup "Novo Grupo...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Nova Subcolecção...">

@@ -114,7 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "항목 삭제...">
 <!ENTITY zotero.toolbar.newLibrary.label "새 라이브러리">
 <!ENTITY zotero.toolbar.newCollection.label "새 컬렉션...">
-<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
+<!ENTITY zotero.toolbar.showCollectionLookup.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "피드를 읽은 것으로 표시">
 <!ENTITY zotero.toolbar.newGroup "새 그룹...">
 <!ENTITY zotero.toolbar.newSubcollection.label "새 하위 컬렉션...">

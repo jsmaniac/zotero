@@ -114,7 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Eintrag entfernen...">
 <!ENTITY zotero.toolbar.newLibrary.label "Neue Bibliothek">
 <!ENTITY zotero.toolbar.newCollection.label "Neue Sammlung...">
-<!ENTITY zotero.toolbar.searchCollections.label "Filter die Sammlungliste...">
+<!ENTITY zotero.toolbar.showCollectionLookup.label "Filter die Sammlungliste...">
 <!ENTITY zotero.toolbar.markFeedRead.label "Feed as gelesen markieren">
 <!ENTITY zotero.toolbar.newGroup "Neue Gruppe...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Neue Untersammlung...">

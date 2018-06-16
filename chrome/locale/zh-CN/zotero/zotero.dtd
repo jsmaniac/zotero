@@ -114,7 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "移除条目...">
 <!ENTITY zotero.toolbar.newLibrary.label "新建文献库">
 <!ENTITY zotero.toolbar.newCollection.label "新建分类…">
-<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
+<!ENTITY zotero.toolbar.showCollectionLookup.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "标记订阅为已读">
 <!ENTITY zotero.toolbar.newGroup "新建群组...">
 <!ENTITY zotero.toolbar.newSubcollection.label "新建子分类…">

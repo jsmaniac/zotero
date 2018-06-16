@@ -114,7 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Fjarlægja færslu…">
 <!ENTITY zotero.toolbar.newLibrary.label "Nýtt færslusafn">
 <!ENTITY zotero.toolbar.newCollection.label "Nýtt safn…">
-<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
+<!ENTITY zotero.toolbar.showCollectionLookup.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Merkja streymi sem lesið">
 <!ENTITY zotero.toolbar.newGroup "Nýr hópur…">
 <!ENTITY zotero.toolbar.newSubcollection.label "Nýtt undirsafn…">

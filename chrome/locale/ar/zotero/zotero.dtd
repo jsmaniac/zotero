@@ -114,7 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "ازالة العنصر...">
 <!ENTITY zotero.toolbar.newLibrary.label "مكتبة جديدة">
 <!ENTITY zotero.toolbar.newCollection.label "مجموعة عناصر جديدة...">
-<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
+<!ENTITY zotero.toolbar.showCollectionLookup.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "علم الخلاصة كمقروءة">
 <!ENTITY zotero.toolbar.newGroup "مجموعة مشاركة جديدة...">
 <!ENTITY zotero.toolbar.newSubcollection.label "مجموعة عناصر فرعية جديدة...">

@@ -114,7 +114,7 @@
 <!ENTITY zotero.toolbar.removeItem.label "Poista nimike...">
 <!ENTITY zotero.toolbar.newLibrary.label "Uusi kirjasto">
 <!ENTITY zotero.toolbar.newCollection.label "Uusi kokoelma...">
-<!ENTITY zotero.toolbar.searchCollections.label "[TODO:TRANSLATE] Filtrer the list of collections…">
+<!ENTITY zotero.toolbar.showCollectionLookup.label "[TODO:TRANSLATE] Filtrer the list of collections…">
 <!ENTITY zotero.toolbar.markFeedRead.label "Merkitse syöte luetuksi">
 <!ENTITY zotero.toolbar.newGroup "Uusi ryhmä...">
 <!ENTITY zotero.toolbar.newSubcollection.label "Uusi alakokoelma...">
