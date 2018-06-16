@@ -406,6 +406,7 @@ var ZoteroPane = new function()
 		_madeVisible = true;
 		
 		this.unserializePersist();
+		this.updateCollectionLookupToolbarButton();
 		this.updateLayout();
 		this.updateToolbarPosition();
 		this.updateTagSelectorSize();
@@ -946,6 +947,17 @@ var ZoteroPane = new function()
 		collection.parentKey = parentKey;
 		return collection.saveTx();
 	});
+	
+	this.showCollectionLookup = Zotero.Promise.coroutine(function* (parentKey) {
+		var collectionsLookupTextbox = document.getElementById('zotero-collection-lookup-textbox');
+		collectionsLookupTextbox.hidden = !collectionsLookupTextbox.hidden;
+		this.updateCollectionLookupToolbarButton();
+	});
+	this.updateCollectionLookupToolbarButton = function () {
+		var collectionsLookupTextbox = document.getElementById('zotero-collection-lookup-textbox');
+		var toolbarButton = document.getElementById('zotero-tb-show-collection-lookup');
+		toolbarButton.checked = !collectionsLookupTextbox.hidden;
+	};
 	
 	this.importFeedsFromOPML = Zotero.Promise.coroutine(function* (event) {
 		var nsIFilePicker = Components.interfaces.nsIFilePicker;
@@ -2444,6 +2456,10 @@ var ZoteroPane = new function()
 		{
 			id: "newCollection",
 			command: "cmd_zotero_newCollection"
+		},
+		{
+			id: "showCollectionLookup",
+			command: "cmd_zotero_showCollectionLookup"
 		},
 		{
 			id: "newSavedSearch",
@@ -4947,6 +4963,9 @@ var ZoteroPane = new function()
 		var serializedValues = Zotero.Prefs.get("pane.persist");
 		if(!serializedValues) return;
 		serializedValues = JSON.parse(serializedValues);
+		if (!serializedValues["zotero-collection-lookup-textbox"]) {
+			serializedValues["zotero-collection-lookup-textbox"] = { hidden: true }; // hidden by default.
+		}
 		for(var id in serializedValues) {
 			var el = document.getElementById(id);
 			if(!el) return;

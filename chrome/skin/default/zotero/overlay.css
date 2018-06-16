@@ -375,7 +375,7 @@
 	list-style-image: url('chrome://zotero/skin/library_add.png');
 }
 
-#zotero-tb-collection-lookup
+#zotero-tb-show-collection-lookup
 {
 	list-style-image: url('chrome://zotero/skin/toolbar-advanced-search.png');
 }
