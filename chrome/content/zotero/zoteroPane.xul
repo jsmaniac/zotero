@@ -343,6 +343,11 @@
 					<box id="zotero-collections-tree-shim"/>
 					<!-- This extra vbox prevents the toolbar from getting compressed when resizing
 							the tag selector to max height -->
+					<textbox id="collections-lookup-textbox" 
+						onkeypress="return Zotero_Lookup.onKeyPress(event, this)" 
+						oninput="Zotero_Lookup.onInput(event, this)" 
+						flex="1" 
+						newlines="pasteintact"/> 
 					<tree id="zotero-collections-tree"
 							hidecolumnpicker="true"
 							oncontextmenu="ZoteroPane.onCollectionsContextMenuOpen(event)"
