@@ -375,6 +375,11 @@
 	list-style-image: url('chrome://zotero/skin/library_add.png');
 }
 
+#zotero-tb-collection-lookup
+{
+	list-style-image: url('chrome://zotero/skin/toolbar-advanced-search.png');
+}
+
 
 #zotero-collections-tree, #zotero-items-tree, #zotero-item-pane > groupbox
 {

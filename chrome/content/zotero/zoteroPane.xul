@@ -107,6 +107,7 @@
 			<toolbar id="zotero-toolbar" class="toolbar toolbar-primary">
 				<hbox id="zotero-collections-toolbar" align="center">
 					<toolbarbutton id="zotero-tb-collection-add" class="zotero-tb-button" tooltiptext="&zotero.toolbar.newCollection.label;" command="cmd_zotero_newCollection"/>
+					<toolbarbutton id="zotero-tb-collection-lookup" class="zotero-tb-button" tooltiptext="&zotero.toolbar.seachCollections.label;" command="cmd_zotero_newCollection"/>
 					<toolbarbutton id="zotero-tb-library-add-menu" class="zotero-tb-button" tooltiptext="&zotero.toolbar.newLibrary.label;" type="menu">
 						<menupopup id="zotero-tb-library-add-popup">
 							<menuitem id="zotero-tb-group-add" label="&zotero.toolbar.newGroup;" oncommand="ZoteroPane_Local.newGroup()"/>
@@ -343,11 +344,9 @@
 					<box id="zotero-collections-tree-shim"/>
 					<!-- This extra vbox prevents the toolbar from getting compressed when resizing
 							the tag selector to max height -->
-					<textbox id="collections-lookup-textbox" 
-						onkeypress="return Zotero_Lookup.onKeyPress(event, this)" 
-						oninput="Zotero_Lookup.onInput(event, this)" 
-						flex="1" 
-						newlines="pasteintact"/> 
+					<textbox id="collections-lookup-textbox" flex="0" type="search" timeout="250" dir="reverse"
+						oncommand="document.getBindingParent(this).handleKeyPress(); event.stopPropagation()"
+						onkeypress="if (event.keyCode == event.DOM_VK_ESCAPE) { document.getBindingParent(this).handleKeyPress(true); }"/>
 					<tree id="zotero-collections-tree"
 							hidecolumnpicker="true"
 							oncontextmenu="ZoteroPane.onCollectionsContextMenuOpen(event)"
