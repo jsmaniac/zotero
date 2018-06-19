@@ -348,8 +348,8 @@
 							the tag selector to max height -->
 					<textbox id="zotero-collection-lookup-textbox" flex="0" type="search" timeout="250" dir="reverse"
 zotero-persist="hidden"
-						oncommand="document.getBindingParent(this).handleKeyPress(); event.stopPropagation()"
-						onkeypress="if (event.keyCode == event.DOM_VK_ESCAPE) { document.getBindingParent(this).handleKeyPress(true); }"/>
+						oncommand="ZoteroPane.onCollectionLookup(); event.stopPropagation()"
+						onkeypress="if (event.keyCode == event.DOM_VK_ESCAPE) { ZoteroPane.onCollectionLookup(true); }"/>
 					<tree id="zotero-collections-tree"
 							hidecolumnpicker="true"
 							oncontextmenu="ZoteroPane.onCollectionsContextMenuOpen(event)"

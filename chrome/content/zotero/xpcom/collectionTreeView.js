@@ -41,6 +41,7 @@ Zotero.CollectionTreeView = function()
 	this.itemTreeView = null;
 	this.itemToSelect = null;
 	this.hideSources = [];
+	this._searchText = '';
 	
 	this._highlightedRows = {};
 	this._unregisterID = Zotero.Notifier.registerObserver(
@@ -1088,6 +1089,14 @@ Zotero.CollectionTreeView.prototype.selectByID = Zotero.Promise.coroutine(functi
 	return true;
 });
 
+Zotero.CollectionTreeView.prototype.setSearch = Zotero.Promise.coroutine(function* (val) {
+	this._searchText = val ? val : '';
+	if (this.isContainerOpen(0)) {
+		this._closeContainer(0);
+		this._rows[0].isOpen = false;
+	}
+	this.toggleOpenState(0);
+});
 
 /**
  * @param	{Integer}		libraryID		Library to select
@@ -1344,15 +1353,35 @@ Zotero.CollectionTreeView.prototype._expandRow = Zotero.Promise.coroutine(functi
 	
 	// Add collections
 	for (var i = 0, len = collections.length; i < len; i++) {
-		let beforeRow = row + 1 + newRows;
-		this._addRowToArray(
-			rows,
-			new Zotero.CollectionTreeRow(this, 'collection', collections[i], level + 1),
-			beforeRow
-		);
-		newRows++;
-		// Recursively expand child collections that should be open
-		newRows += yield this._expandRow(rows, beforeRow);
+flds = "";
+for (field in collections[i]) { flds += ",\n " + field + " = " + collections[i][field]; }
+//alert(flds);
+		var searchInChildCollections = function (collection, str) {
+//alert(collection.name);
+			if (collection.name.toLowerCase().indexOf(str) >= 0) {
+				return true;
+			}
+			else {
+				var rcollections = collection.getChildCollections();
+				for (var j = 0, jlen = rcollections.length; j < jlen; j++) {
+					if (searchInChildCollections(rcollections[j], str)) {
+						return true;
+					}
+				}
+				return false;
+			}
+		}
+		if (searchInChildCollections(collections[i], this._searchText)) {
+			let beforeRow = row + 1 + newRows;
+			this._addRowToArray(
+				rows,
+				new Zotero.CollectionTreeRow(this, 'collection', collections[i], level + 1),
+				beforeRow
+			);
+			newRows++;
+			// Recursively expand child collections that should be open
+			newRows += yield this._expandRow(rows, beforeRow);
+		}
 	}
 	
 	if (isCollection) {

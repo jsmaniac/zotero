@@ -958,6 +958,27 @@ var ZoteroPane = new function()
 		var toolbarButton = document.getElementById('zotero-tb-show-collection-lookup');
 		toolbarButton.checked = !collectionsLookupTextbox.hidden;
 	};
+	this._collectionSearch = false;
+	this.onCollectionLookup = function (clear) {
+		var setSearch = function(val) {
+			this._collectionSearch = val
+				? val.toLowerCase().normalize()
+				: false;
+			ZoteroPane_Local.collectionsView.setSearch(_collectionSearch);
+		};
+		var collectionsLookupTextbox = document.getElementById('zotero-collection-lookup-textbox');
+		if (typeof clear != 'undefined') {
+			if (clear){
+				collectionsLookupTextbox.value = '';
+				setSearch('');
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
+		setSearch(collectionsLookupTextbox.value);
+	};	
 	
 	this.importFeedsFromOPML = Zotero.Promise.coroutine(function* (event) {
 		var nsIFilePicker = Components.interfaces.nsIFilePicker;
