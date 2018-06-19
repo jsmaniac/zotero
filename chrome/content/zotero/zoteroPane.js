@@ -951,6 +951,9 @@ var ZoteroPane = new function()
 	this.showCollectionLookup = Zotero.Promise.coroutine(function* (parentKey) {
 		var collectionsLookupTextbox = document.getElementById('zotero-collection-lookup-textbox');
 		collectionsLookupTextbox.hidden = !collectionsLookupTextbox.hidden;
+		if (!collectionsLookupTextbox.hidden) {
+			collectionsLookupTextbox.focus();
+		}
 		this.updateCollectionLookupToolbarButton();
 	});
 	this.updateCollectionLookupToolbarButton = function () {
