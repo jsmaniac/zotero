@@ -41,7 +41,8 @@ Zotero.CollectionTreeView = function()
 	this.itemTreeView = null;
 	this.itemToSelect = null;
 	this.hideSources = [];
-	this._searchText = '';
+	this._searchCache = { searchText: '' };
+	this.selectedBeforeSearch = Zotero.Prefs.get('lastViewedFolder');
 	
 	this._highlightedRows = {};
 	this._unregisterID = Zotero.Notifier.registerObserver(
@@ -1090,12 +1091,13 @@ Zotero.CollectionTreeView.prototype.selectByID = Zotero.Promise.coroutine(functi
 });
 
 Zotero.CollectionTreeView.prototype.setSearch = Zotero.Promise.coroutine(function* (val) {
-	this._searchText = val ? val : '';
-	if (this.isContainerOpen(0)) {
-		this._closeContainer(0);
-		this._rows[0].isOpen = false;
-	}
-	this.toggleOpenState(0);
+	this._searchCache = { searchText: val ? val : '' };
+	var selectedBeforeSearch = this.getSelectedCollection(true);
+	if (selectedBeforeSearch) { this.selectedBeforeSearch = 'C' + selectedBeforeSearch; }
+	this.collapseLibrary(Zotero.Libraries.userLibraryID);
+	yield this.expandLibrary(Zotero.Libraries.userLibraryID, true);
+	this._refreshRowMap();
+	this.selection.select(this._rowMap[this.selectedBeforeSearch]);
 });
 
 /**
@@ -1353,25 +1355,36 @@ Zotero.CollectionTreeView.prototype._expandRow = Zotero.Promise.coroutine(functi
 	
 	// Add collections
 	for (var i = 0, len = collections.length; i < len; i++) {
-flds = "";
-for (field in collections[i]) { flds += ",\n " + field + " = " + collections[i][field]; }
-//alert(flds);
-		var searchInChildCollections = function (collection, str) {
-//alert(collection.name);
-			if (collection.name.toLowerCase().indexOf(str) >= 0) {
-				return true;
-			}
-			else {
-				var rcollections = collection.getChildCollections();
-				for (var j = 0, jlen = rcollections.length; j < jlen; j++) {
-					if (searchInChildCollections(rcollections[j], str)) {
-						return true;
-					}
+		// This function checks whether this collection or one of its descendandts is a search result.
+		var that = this;
+		var isSearchResult = function (collection) {
+			if (that._searchCache.hasOwnProperty(collection.id)) {
+				return that._searchCache[collection.id];
+			} else {
+				if (that.selectedBeforeSearch == 'C' + collection.id) {
+					// To avoid most bugs that could happen if the selected row is invisible,
+					// and to make things more practical when searching for a collection to which
+					// one wants to add an item, we keep the selected collection visible.
+					that._searchCache[collection.id] = true;
+					return true;
+				} else if (collection.name.toLowerCase().indexOf(that._searchCache.searchText) >= 0) {
+					that._searchCache[collection.id] = true;
+					return true;
 				}
-				return false;
+				else {
+					var rcollections = collection.getChildCollections();
+					for (var j = 0, jlen = rcollections.length; j < jlen; j++) {
+						if (isSearchResult(rcollections[j])) {
+							that._searchCache[collection.id] = true;
+							return true;
+						}
+					}
+					that._searchCache[collection.id] = false;
+					return false;
+				}
 			}
-		}
-		if (searchInChildCollections(collections[i], this._searchText)) {
+		};
+		if (isSearchResult(collections[i])) {
 			let beforeRow = row + 1 + newRows;
 			this._addRowToArray(
 				rows,
